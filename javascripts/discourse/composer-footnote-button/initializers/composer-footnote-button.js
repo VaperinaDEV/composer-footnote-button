@@ -6,6 +6,10 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {
+      const currentLocale = I18n.currentLocale();
+      if (!I18n.translations[currentLocale].js.composer) {
+        I18n.translations[currentLocale].js.composer = {};
+      }
       api.onToolbarCreate(function(toolbar) {
         toolbar.addButton({
           trimLeading: true,
@@ -17,7 +21,7 @@ export default {
             return e.applySurround(
               '^[',
               "]",
-              'themePrefix("composer_footnote_button_text")'
+              themePrefix("composer_footnote_button_text")
             );
           }
         });
