@@ -1,4 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
+import I18n from "I18n";
 
 export default {
   name: "composer-footnote-button",
@@ -11,12 +12,12 @@ export default {
           id: "quick-footnote",
           group: "extras",
           icon: 'superscript',
-          title: I18n.t(themePrefix("composer_footnote_button_title")),
+          title: themePrefix("composer_footnote_button_title"),
           perform: function(e) {
             return e.applySurround(
               '^[',
               "]",
-              I18n.t(themePrefix("composer_footnote_button_text"))
+              themePrefix("composer_footnote_button_text")
             );
           }
         });
