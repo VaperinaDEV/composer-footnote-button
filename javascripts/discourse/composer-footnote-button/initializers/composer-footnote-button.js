@@ -10,6 +10,8 @@ export default {
       if (!I18n.translations[currentLocale].js.composer) {
         I18n.translations[currentLocale].js.composer = {};
       }
+      
+      I18n.translations[currentLocale].js.composer.footnote_button_text = themePrefix("composer_footnote_button_text");
       api.onToolbarCreate(function(toolbar) {
         toolbar.addButton({
           trimLeading: true,
@@ -21,7 +23,7 @@ export default {
             return e.applySurround(
               '^[',
               "]",
-              themePrefix("composer_footnote_button_text")
+              "footnote_button_text"
             );
           }
         });
