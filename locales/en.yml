@@ -1,4 +1,4 @@
 en:
-  composer:
-    footnote_button_title: "Lábjegyzet beillesztése"
-    footnote_button_text: "ez a szöveg lábjegyzetben lesz"
+  composer_footnote_button:
+    title: "Lábjegyzet beillesztése"
+    text: "ez a szöveg lábjegyzetben lesz"
