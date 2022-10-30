@@ -6,24 +6,18 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {
-      const currentLocale = I18n.currentLocale();
-      if (!I18n.translations[currentLocale].js.composer) {
-        I18n.translations[currentLocale].js.composer = {};
-      }
-      
-      I18n.translations[currentLocale].js.composer.footnote_button_text = themePrefix("composer_footnote_button_text");
       api.onToolbarCreate(function(toolbar) {
         toolbar.addButton({
           trimLeading: true,
           id: "quick-footnote",
           group: "extras",
           icon: 'superscript',
-          title: themePrefix("composer_footnote_button_title"),
+          title: settings.composer_footnote_button_title,
           perform: function(e) {
             return e.applySurround(
               '^[',
               "]",
-              "footnote_button_text"
+              settings.composer_footnote_button_text
             );
           }
         });
