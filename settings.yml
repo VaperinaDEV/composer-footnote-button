@@ -1,0 +1,8 @@
+composer_footnote_button_title:
+  type: string
+  default: "Lábjegyzet beillesztése"
+  description: "Composer footnote button title"
+composer_footnote_button_text:
+  type: string
+  default: "ez a szöveg lábjegyzetben lesz"
+  description: "Composer footnote button text"
