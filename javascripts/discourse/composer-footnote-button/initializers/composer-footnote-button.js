@@ -11,12 +11,12 @@ export default {
           id: "quick-footnote",
           group: "extras",
           icon: 'superscript',
-          title: "composer_footnote_button.title",
+          title: I18n.t(themePrefix("composer_footnote_button.title")),
           perform: function(e) {
             return e.applySurround(
               '^[',
               "]",
-              "composer_footnote_button.text"
+              I18n.t(themePrefix("composer_footnote_button.text"))
             );
           }
         });
