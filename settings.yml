@@ -6,3 +6,19 @@ composer_footnote_button_text:
   type: string
   default: "ez a szöveg lábjegyzetben lesz"
   description: "Composer footnote button text"
+composer_footnote_button_icon:
+  type: string
+  default: "superscript"
+  description: "Change footnote button icon."
+svg_icons: 
+  default: "superscript"
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 5 icons used in this theme component."
+composer_footnote_button_group:
+  default: insertions
+  type: enum
+  choices:
+    - fontStyles
+    - extras
+  description: "Change footnote button group position."
