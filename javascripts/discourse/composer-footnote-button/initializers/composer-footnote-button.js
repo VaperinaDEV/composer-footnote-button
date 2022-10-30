@@ -17,7 +17,7 @@ export default {
             return e.applySurround(
               '^[',
               "]",
-              themePrefix("composer_footnote_button_text"),
+              'themePrefix("composer_footnote_button_text")'
             );
           }
         });
