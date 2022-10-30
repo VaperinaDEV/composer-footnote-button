@@ -18,8 +18,8 @@ export default {
         toolbar.addButton({
           trimLeading: true,
           id: "quick-footnote",
-          group: "extras",
-          icon: 'superscript',
+          group: settings.composer_footnote_button_group,
+          icon: settings.composer_footnote_button_icon,
           title: "footnote_button_title",
           perform: function(e) {
             return e.applySurround(
