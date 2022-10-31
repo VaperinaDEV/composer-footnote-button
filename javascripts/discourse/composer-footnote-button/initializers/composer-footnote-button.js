@@ -37,9 +37,8 @@ export default {
           };
         });
       } else {
-        api.onToolbarCreate(function(toolbar) {
+        api.onToolbarCreate(toolbar => {
           toolbar.addButton({
-            trimLeading: true,
             id: "quick-footnote",
             action: "footnoteButton",
             group: settings.composer_footnote_button_group,
