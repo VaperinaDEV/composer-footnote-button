@@ -7,7 +7,7 @@ export default {
   initialize() {
     withPluginApi("0.8", (api) => {
       
-      const tooltip = $("#footnote-tooltip");
+      var tooltip = $("#footnote-tooltip");
 
       // reset state by hidding tooltip, it handles "click outside"
       // allowing to hide the tooltip when you click anywhere else
