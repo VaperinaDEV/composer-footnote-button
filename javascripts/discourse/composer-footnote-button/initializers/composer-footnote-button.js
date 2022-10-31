@@ -6,9 +6,6 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {   
-      $('#footnote-tooltip').click(function() {
-        $('#footnote-tooltip').attr("data-show");
-      });
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
         I18n.translations[currentLocale].js.composer = {};
