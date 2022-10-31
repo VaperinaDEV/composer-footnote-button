@@ -30,7 +30,7 @@ export default {
           }
         });
       });
-      document.querySelector('#footnote-tooltip[data-show]').addEventListener('click', e => {
+      $('#footnote-tooltip[data-show]').click(function(e) => {
         e.preventDefault();
       });
     });
