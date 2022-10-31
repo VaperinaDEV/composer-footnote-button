@@ -10,7 +10,7 @@ export default {
       const tooltipp = $("#footnote-tooltip");
       
       tooltipp.click(function() {
-        tooltipp.setAttribute("data-show");
+        tooltipp.attr("data-show");
       });
       
       const currentLocale = I18n.currentLocale();
