@@ -10,7 +10,7 @@ export default {
 
       // reset state by hidding tooltip, it handles "click outside"
       // allowing to hide the tooltip when you click anywhere else
-      tooltipp?.setAttribute("data-show");
+      tooltipp.setAttribute("data-show");
 
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
