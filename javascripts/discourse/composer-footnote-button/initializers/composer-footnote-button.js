@@ -6,6 +6,10 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {
+      if (!event.target.classList.contains("expand-footnote") || !event.target.classList.contains("footnote-tooltip")) {
+        return;
+      }
+
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
         I18n.translations[currentLocale].js.composer = {};
