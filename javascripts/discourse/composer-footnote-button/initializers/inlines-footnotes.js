@@ -49,10 +49,10 @@ function footNoteEventHandler(event) {
 
   // reset state by hidding tooltip, it handles "click outside"
   // allowing to hide the tooltip when you click anywhere else
-  tooltip?.setAttribute("data-show");
+  tooltip?.removeAttribute("data-show");
 
   // if we didn't actually click a footnote button, exit early
-  if (!event.target.classList.contains("expand-footnote")) {
+  if (!event.target.classList.contains("expand-footnote") || tooltip) {
     return;
   }
 
