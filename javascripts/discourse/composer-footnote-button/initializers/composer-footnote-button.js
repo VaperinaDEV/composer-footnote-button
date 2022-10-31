@@ -30,6 +30,9 @@ export default {
           }
         });
       });
+      document.querySelector('#footnote-tooltip[data-show]').addEventListener('click', e => {
+        e.preventDefault();
+      });
     });
   },
 };
