@@ -57,7 +57,7 @@ function footNoteEventHandler(event) {
   }
 
   // if we didn't actually click a footnote button, exit early
-  if (!tooltip")) {
+  if (!tooltip) {
     return;
   }
 
