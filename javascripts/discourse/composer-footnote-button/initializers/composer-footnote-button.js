@@ -6,7 +6,7 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {   
-      $('#footnote-tooltip').click(function() => {
+      $('#footnote-tooltip').click(function() {
         $('#footnote-tooltip').attr("data-show");
       });
       const currentLocale = I18n.currentLocale();
