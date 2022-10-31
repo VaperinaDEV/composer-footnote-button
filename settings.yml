@@ -15,6 +15,10 @@ svg_icons:
   type: "list"
   list_type: "compact"
   description: "List of FontAwesome 5 icons used in this theme component."
+put_in_popup_menu:
+  type: bool
+  default: true
+  description: "Add footnote button to popup options menu."  
 composer_footnote_button_group:
   default: insertions
   type: enum
