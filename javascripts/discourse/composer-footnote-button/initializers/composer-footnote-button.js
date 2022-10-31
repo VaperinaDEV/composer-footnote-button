@@ -7,12 +7,11 @@ export default {
   initialize() {
     withPluginApi("0.8", (api) => {
       
-      const tooltipp = document.getElementById("footnote-tooltip");
+      const tooltipp = $("#footnote-tooltip");
       
-      tooltipp.on("click", function() {
+      tooltipp.click(function() {
         tooltipp.setAttribute("data-show");
       });
-      
       
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
