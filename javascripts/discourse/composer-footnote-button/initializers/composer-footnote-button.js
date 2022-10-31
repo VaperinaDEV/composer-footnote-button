@@ -6,6 +6,16 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {
+      
+      const tooltip = $("#footnote-tooltip[data-show]");
+
+
+
+      // if we didn't actually click a footnote button, exit early
+      if (!tooltip) {
+        return;
+      }
+      
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
         I18n.translations[currentLocale].js.composer = {};
