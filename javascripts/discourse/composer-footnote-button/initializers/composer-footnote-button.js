@@ -5,19 +5,7 @@ export default {
   name: "composer-footnote-button",
 
   initialize() {
-    withPluginApi("0.8", (api) => {
-      
-      var tooltip = $("#footnote-tooltip");
-
-      // reset state by hidding tooltip, it handles "click outside"
-      // allowing to hide the tooltip when you click anywhere else
-      tooltip.attr("data-show");
-
-      // if we didn't actually click a footnote button, exit early
-      if (!tooltip) {
-        return;
-      }
-      
+    withPluginApi("0.8", (api) => {      
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
         I18n.translations[currentLocale].js.composer = {};
