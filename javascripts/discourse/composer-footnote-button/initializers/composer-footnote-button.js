@@ -31,6 +31,7 @@ export default {
         });
       });
       $('#footnote-tooltip').click(function(e) => {
+        $('#footnote-tooltip').attr('data-show');
         e.preventDefault();
       });
     });
