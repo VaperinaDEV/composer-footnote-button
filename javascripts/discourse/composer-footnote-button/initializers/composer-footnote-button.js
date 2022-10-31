@@ -14,22 +14,40 @@ export default {
       I18n.translations[currentLocale].js.composer.footnote_button_text = settings.composer_footnote_button_text;
       I18n.translations[currentLocale].js.footnote_button_title = settings.composer_footnote_button_title;
       
-      api.onToolbarCreate(function(toolbar) {
-        toolbar.addButton({
-          trimLeading: true,
-          id: "quick-footnote",
-          group: settings.composer_footnote_button_group,
-          icon: settings.composer_footnote_button_icon,
-          title: "footnote_button_title",
-          perform: function(e) {
-            return e.applySurround(
+      api.modifyClass("controller:composer", {
+        pluginId: "FootnoteButton",
+
+        actions: {
+          footnoteButton() {
+            this.get("toolbarEvent").applySurround(
               '^[',
               "]",
               "footnote_button_text"
             );
-          }
-        });
+          },
+        },
       });
+      
+      if (settings.put_in_popup_menu) {
+        api.addToolbarPopupMenuOptionsCallback((controller) => {
+          return {
+            action: "footnoteButton",
+            icon: settings.composer_footnote_button_icon,
+            label: settings.composer_footnote_button_title,
+          };
+        });
+      } else {
+        api.onToolbarCreate(function(toolbar) {
+          toolbar.addButton({
+            trimLeading: true,
+            id: "quick-footnote",
+            action: "footnoteButton",
+            group: settings.composer_footnote_button_group,
+            icon: settings.composer_footnote_button_icon,
+            title: "footnote_button_title",
+          });
+        });
+      }
     });
   },
 };
