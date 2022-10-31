@@ -37,13 +37,20 @@ export default {
           };
         });
       } else {
-        api.onToolbarCreate(toolbar => {
+        api.onToolbarCreate(function(toolbar) {
           toolbar.addButton({
+            trimLeading: true,
             id: "quick-footnote",
-            action: "footnoteButton",
             group: settings.composer_footnote_button_group,
             icon: settings.composer_footnote_button_icon,
             title: "footnote_button_title",
+            perform: function(e) {
+              return e.applySurround(
+                '^[',
+                "]",
+                "footnote_button_text"
+              );
+            }
           });
         });
       }
