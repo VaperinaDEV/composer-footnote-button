@@ -1,10 +1,10 @@
 composer_footnote_button_title:
   type: string
-  default: "Lábjegyzet beillesztése"
+  default: "Insert Footnote"
   description: "Composer footnote button title"
 composer_footnote_button_text:
   type: string
-  default: "ez a szöveg lábjegyzetben lesz"
+  default: "This text will be in footnote"
   description: "Composer footnote button text"
 composer_footnote_button_icon:
   type: string
@@ -18,7 +18,7 @@ svg_icons:
 put_in_popup_menu:
   type: bool
   default: true
-  description: "Add footnote button to popup options menu."  
+  description: "Add the footnote button to popup options menu. Uncheck this to put it to toolbar section."  
 composer_footnote_button_group:
   default: insertions
   type: enum
