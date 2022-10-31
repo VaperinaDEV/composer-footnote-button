@@ -52,7 +52,7 @@ function footNoteEventHandler(event) {
   tooltip?.removeAttribute("data-show");
 
   // if we didn't actually click a footnote button, exit early
-  if (!event.target.classList.contains("expand-footnote")) {
+  if (!event.target.classList.contains("footnote-tooltip-content")) {
     return;
   }
 
