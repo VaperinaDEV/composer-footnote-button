@@ -6,12 +6,14 @@ export default {
 
   initialize() {
     withPluginApi("0.8", (api) => {
+      
       const tooltipp = document.getElementById("footnote-tooltip");
-
-      // reset state by hidding tooltip, it handles "click outside"
-      // allowing to hide the tooltip when you click anywhere else
-      tooltipp.setAttribute("data-show");
-
+      
+      tooltipp.on("click", function() {
+        tooltipp.setAttribute("data-show");
+      });
+      
+      
       const currentLocale = I18n.currentLocale();
       if (!I18n.translations[currentLocale].js.composer) {
         I18n.translations[currentLocale].js.composer = {};
