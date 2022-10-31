@@ -7,7 +7,7 @@ export default {
   initialize() {
     withPluginApi("0.8", (api) => {
       
-      const tooltipp = $("#footnote-tooltip");
+      const tooltipp = $("#footnote-tooltip[data-show]");
       
       tooltipp.click(function() {
         tooltipp.attr("data-show");
