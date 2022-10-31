@@ -9,7 +9,9 @@ export default {
       
       const tooltip = $("#footnote-tooltip[data-show]");
 
-
+      // reset state by hidding tooltip, it handles "click outside"
+      // allowing to hide the tooltip when you click anywhere else
+      tooltip.attr("data-show");
 
       // if we didn't actually click a footnote button, exit early
       if (!tooltip) {
