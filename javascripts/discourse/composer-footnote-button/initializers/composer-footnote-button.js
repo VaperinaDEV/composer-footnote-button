@@ -33,7 +33,7 @@ export default {
           return {
             action: "footnoteButton",
             icon: settings.composer_footnote_button_icon,
-            label: settings.composer_footnote_button_title,
+            label: "footnote_button_title",
           };
         });
       } else {
