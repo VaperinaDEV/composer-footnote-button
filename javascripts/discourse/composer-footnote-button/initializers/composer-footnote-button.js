@@ -11,6 +11,9 @@ export default {
         I18n.translations[currentLocale].js.composer = {};
       }
       
+      I18n.translations[currentLocale].js.composer.footnote_button_text = themePrefix("composer_footnote_button_text");
+      I18n.translations[currentLocale].js.footnote_button_title = themePrefix("composer_footnote_button_title");
+      
       api.modifyClass("controller:composer", {
         pluginId: "FootnoteButton",
 
@@ -19,7 +22,7 @@ export default {
             this.get("toolbarEvent").applySurround(
               '^[',
               "]",
-              I18n.translations[currentLocale].js.composer.footnote_button_text,
+              "footnote_button_text",
               { multiline: false }
             );
           },
@@ -31,7 +34,7 @@ export default {
           return {
             action: "footnoteButton",
             icon: settings.composer_footnote_button_icon,
-            label: I18n.translations[currentLocale].js.footnote_button_title,
+            label: "footnote_button_title",
           };
         });
       } else {
@@ -41,12 +44,12 @@ export default {
             id: "quick-footnote",
             group: settings.composer_footnote_button_group,
             icon: settings.composer_footnote_button_icon,
-            title: I18n.translations[currentLocale].js.footnote_button_title,
+            title: "footnote_button_title",
             perform: function(e) {
               return e.applySurround(
                 '^[',
                 "]",
-                I18n.translations[currentLocale].js.composer.footnote_button_text,
+                "footnote_button_text",
                 { multiline: false }
               );
             }
